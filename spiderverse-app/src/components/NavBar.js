@@ -10,7 +10,7 @@ export default function NavBar(props){
         THE MAIN CHARACTERS
       </button>
 
-      <img className = img Btn  onClick ={() => props.handleChangeView('Welcome')} />
+      <img className = "imgBtn" src= "url(.../Media/Shape 1.png)" onClick ={() => props.handleChangeView('Welcome')} />
 
       <button className = "button" onClick= {() => props.handleChangeView('Index')}>
         VAULT OF SPIDERS

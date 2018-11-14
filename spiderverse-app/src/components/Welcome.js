@@ -6,7 +6,7 @@ export default function Welcome(){
       <div className= "mainModule">
         <p className = "smallText">Greetings True Believer!</p>
         <p className = "smallText">Prepare to Enter The</p>
-          <img className = "logo" src="./Media/Spider-Verse_logo.png" />
+          <img className = "logo" src="url(..../Media/Spider-Verse_logo.png)" />
         <h3 className = "regText">
           Get the 411 on all your favorite
           Spider-Men (& Women,..and Robots, Pigs, Etc)

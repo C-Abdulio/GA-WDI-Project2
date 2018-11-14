@@ -2,18 +2,17 @@
   text-align: center;
   background-color: darkblue;
   color: red;
-  height: 100vh;
-  width: 100vw;
+  height: 100rem;
+  width: 100rem;
 }
 
-#root{
+/* #root{
   background-color: darkblue;
   color: red;
-}
+} */
 
 .navBar {
-  width: 90rem;
-  height:50%;
+  width: auto;
+  height:10rem;
   background-color: rgba(65, 96, 150, 1);
-  s
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import NavBar from './components/NavBar.js';
-// import Welcome from './components/Welcome.js';
+import Welcome from './components/Welcome.js';
 
 
 /* The URL that you will be calling from...until you get a better API*/
@@ -16,15 +16,24 @@ class App extends Component {
       listData: [],
       name: '',
       fullName:'',
-      bio: '',
-      firstAppear: ''
+      universe: '',
+      bio: '' ,
+      firstAppear: '',
+      currentView: ''
     }
   }
+
+  // async componentDidMount(){
+  //   try{
+  //     await
+  //   }
+  // }
 
   render() {
     return (
       <div className="App">
         <NavBar handleChangeView = {this.setView} />
+        <Welcome />
         {/* {this.changeView()} */}
       </div>
     );
