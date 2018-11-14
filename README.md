@@ -8,8 +8,12 @@ A Data list documenting a summary of the popular Marvel comic book event, *SPIDE
 
 EDIT: In leau of any possible contention against sending data to a foreign API, I could change the final component to become a tribute to Stan Lee.
 
-## API *Attempting* to use: https://comicvine.gamespot.com/api/
-##This API was chosen for their robust list of various super hero characters, location and concepts from across all publishing houses. Need to sign in to an account to use. Currently in discussions with team to gain permissions.
+## API ~~*Attempting*~~ FAILED to use: https://comicvine.gamespot.com/api/
+##~~This API was chosen for their robust list of various super hero characters, location and concepts from across all publishing houses. Need to sign in to an account to use. Currently in discussions with team to gain permissions.~~
+EDIT: This organization behind this API has yet to come back with an answer in regards to signing up to use their API. So for the sake of time, this API is trashed.
+
+## second API ~~*Attempting*~~ to use: http://spiderman.wikia.com/api.php?
+## currently learning about how to parse this data into JSON in order to cull specific points. Wiki is not particular consistent but more dependable
 
 ##(Alternative: http://gateway.marvel.com/v1/)
 
@@ -36,13 +40,19 @@ EDIT: In leau of any possible contention against sending data to a foreign API, 
  - Board is 100vw wide & 100vh long, with the chance of being bigger.
  - First component is a Nav Bar that has several OnClick events that changes the view of the APP to 5 different components.
  - Component is made out of 4 regular buttons and one image with an OnClick, in the shape of a stylized Spider.
+
 ![Component2](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide1.png)
+
  **Component 2 - Welcome Screen**
  - Just a regular Welcome screen. Made out of texts and an image
+
  ![Component3](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide2.png)
+
  **Component 3  - Intro Screen**
  - A brief summary of the events of the *Spider-Man* event, *SPIDER-VERSE*, featuring media such as images and perhaps a video or two, as well as hinting towards the current Spider-Event, *SPIDER-GEDDON*.
+
  ![Component4](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide3.png)
+
  **Component 4 - Character List**
  - A list of specific character data culled from the API, listing the core characters of the various Spider-Crossovers. Each Data will be contained in a div that has 4 elements: A profile image, their hero name, their real name & the Earth number they came from. Each div will be dynamically styled to fit their specific hero. May or may not include a more comprehensive bio. The list will go as follows:
   - Peter Parker/Spider-Man
@@ -56,7 +66,9 @@ EDIT: In leau of any possible contention against sending data to a foreign API, 
   - Peter Porker/Spider-Ham
   - Morlun
   - The Inheritors
+
   ![Component5](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide4.png)
+
   **Component 5 - Vault of Spiders(Large API List)**
   - A list of character data regarding various characters in the Spider-Man universe, mostly including many alternate variations of the *Spider-Man* character of many races, genders and composition. Current plan is to have each list item placed in a div according to the following key values:
   - Hero name
@@ -64,7 +76,8 @@ EDIT: In leau of any possible contention against sending data to a foreign API, 
   - First Appearance: Name of comic, issue number, vol number and year of publication
   - An image (if available)
   Can and WILL be scaled down if necessary.
-  ![Component5]
+
+![Component6](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide5.png)
   **Component 6 - Post Screen**
   - 2 input fields and One Select Field that the user can interact with by inputting text.
   - Each input field corresponds to the following paramters:
@@ -76,6 +89,9 @@ EDIT: In leau of any possible contention against sending data to a foreign API, 
      - If Gender === "Boy", it will render a div featuring their name, the number of their Earth (e.g Earth - 1234) and a blue/red colored div featuring a shadowy Spider-Man figure.
      - If Gender === "Girl", it will render a div featuring their name, the number of their Earth (e.g Earth - 1234) and a teal/pink colored div featuring a shadowy Spider-Woman figure.
      - If Gender === "Alternative", the same will happen as the other two, but rendered with a black or white color and have a more gender neutral Spider-Avatar.
+
+ ![Component5](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide5After.png)
+
 ## This Will and MAY get cut if the API does not permit to insert user elements on to the list or if the feature cannot be properly implemented
 
 **Component 6 Alt - A Tribute to Stan Lee**
