@@ -15,4 +15,16 @@
   width: auto;
   height:10rem;
   background-color: rgba(65, 96, 150, 1);
+  position:sticky;
+}
+
+.logo{
+  width:50%;
+  height: 50%;
+}
+
+.imgBtn{
+  width:auto;
+  height:10rem;
+  position:absolute;
 }

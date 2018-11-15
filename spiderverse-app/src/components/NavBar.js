@@ -1,4 +1,5 @@
 import React from 'react';
+import NavImage from './Shape1.png';
 
 export default function NavBar(props){
   return(
@@ -10,7 +11,9 @@ export default function NavBar(props){
         THE MAIN CHARACTERS
       </button>
 
-      <img className = "imgBtn" src= "url(.../Media/Shape 1.png)" onClick ={() => props.handleChangeView('Welcome')} />
+      <div className = "imgBtn" onClick ={() => props.handleChangeView('Welcome')}>
+      <img alt= "homeButton" src= {NavImage} />
+      </div>
 
       <button className = "button" onClick= {() => props.handleChangeView('Index')}>
         VAULT OF SPIDERS
