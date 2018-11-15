@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from "./Spider-Verse_logo.png"
+
 export default function Welcome(){
   return(
     <div>
