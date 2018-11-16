@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+
+}
+
+.bigIndex{
+  display:flex;
+  flex-flow: column;
+}
+
+.pics{
+  width:5px;
+  height:5px;
+  border:solid 2px white;
+}
