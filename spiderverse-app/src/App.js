@@ -3,14 +3,14 @@ import axios from 'axios';
 import './App.css';
 import NavBar from './components/NavBar';
 import Welcome from './components/Welcome';
-import TestData from './marvelTest.json';
+// import TestData from './marvelTest.json';
 import BigList from './components/BigList';
 import Intro from './components/Intro';
 import HeroList from './components/HeroList';
 
 /* The URL that you will be calling from...until you get a better API*/
-// const MAHVEL_URL = `http://gateway.marvel.com/v1/public/characters/`;
-// const KEY = process.env.MAHVEL_API_SHIT;
+const KEY = process.env.REACT_APP_API_KEY;
+const URL = 'http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=spider';
 // //////////////////////////
 /* The App component in total*/
 class App extends Component {
@@ -29,9 +29,16 @@ class App extends Component {
     this.setView = this.setView.bind(this);
   }
 
-  async componentDidMount(){
+  async fetchData(){
+    const opts = {
+      params:{
+        apikey: KEY
+      }
+    };
+
     try{
-      const list = TestData.data.results;
+      const resp = await axios(URL, opts);
+      const list = resp.data.data.results;
       // const list = await axios(`${MAHVEL_URL}/1011334/${KEY}`);
       console.log(`this ${list} is a componentDidMount`);
       this.setState({
@@ -41,6 +48,10 @@ class App extends Component {
     catch(error){
       console.log(error);
     }
+  }
+
+  componentDidMount(){
+    this.fetchData();
   }
 
   changeView(){
