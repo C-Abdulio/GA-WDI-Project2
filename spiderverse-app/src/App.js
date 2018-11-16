@@ -6,6 +6,7 @@ import Welcome from './components/Welcome';
 import TestData from './marvelTest.json';
 import BigList from './components/BigList';
 import Intro from './components/Intro';
+import HeroList from './components/HeroList';
 
 /* The URL that you will be calling from...until you get a better API*/
 // const MAHVEL_URL = `http://gateway.marvel.com/v1/public/characters/`;
@@ -45,12 +46,12 @@ class App extends Component {
   changeView(){
     const view = this.state.currentView;
     switch(view){
-      // case 'Heroes':
-        // return <HeroList />
       case 'Index':
         return <BigList listData = {this.state.listData} />
       case 'Intro':
         return <Intro />
+      case 'Heroes':
+        return <HeroList heroData = {this.state.listData} />
       default:
         return <Welcome />
     }
