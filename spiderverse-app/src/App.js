@@ -7,6 +7,7 @@ import Welcome from './components/Welcome';
 import BigList from './components/BigList';
 import Intro from './components/Intro';
 import HeroList from './components/HeroList';
+import webBG from './webpattern.jpeg';
 
 /* The URL that you will be calling from...until you get a better API*/
 const KEY = process.env.REACT_APP_API_KEY;
@@ -18,6 +19,7 @@ class App extends Component {
     super(props);
     this.state = {
       listData: [],
+      newData: [],
       name: '',
       fullName:'',
       universe: '',
@@ -37,12 +39,23 @@ class App extends Component {
     };
 
     try{
+
       const resp = await axios(URL, opts);
       const list = resp.data.data.results;
-      // const list = await axios(`${MAHVEL_URL}/1011334/${KEY}`);
       console.log(`this ${list} is a componentDidMount`);
       this.setState({
         listData:list
+      })
+      const listData = this.state.listData;
+      console.log(listData);
+      const newArray = [
+        listData[4],
+        listData[13],
+        listData[6],
+        listData[8]
+      ]
+      this.setState({
+        selectData: newArray
       })
     }
     catch(error){
@@ -62,7 +75,7 @@ class App extends Component {
       case 'Intro':
         return <Intro />
       case 'Heroes':
-        return <HeroList heroData = {this.state.listData} />
+        return <HeroList heroData = {this.state.selectData} />
       default:
         return <Welcome />
     }
@@ -79,6 +92,7 @@ class App extends Component {
       <div className="App">
         <NavBar handleChangeView= {this.setView} />
         {this.changeView()}
+        <img className = "bg" src = {webBG} />
       </div>
     );
   }

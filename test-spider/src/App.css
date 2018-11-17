@@ -4,14 +4,17 @@
 }
 
 .bigIndex{
-  width: 5px;
-  height: 5px;
+
   display:flex;
-  flex-flow: column;
+  flex-flow: row;
 }
 
 .pics{
-  width:5px;
-  height:5px;
   border:solid 2px white;
+}
+
+.pics img{
+  width:100px;
+  height:100px;
+  border:solid black 5px;
 }

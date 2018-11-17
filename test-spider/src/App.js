@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TestList from './Drake';
+import "./App.css"
 
 const KEY = process.env.REACT_APP_API_KEY;
 const URL = 'http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=spider';
