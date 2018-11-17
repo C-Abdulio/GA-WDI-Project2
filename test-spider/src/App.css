@@ -4,6 +4,8 @@
 }
 
 .bigIndex{
+  width: 5px;
+  height: 5px;
   display:flex;
   flex-flow: column;
 }

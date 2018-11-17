@@ -1,12 +1,12 @@
 import React from 'react';
 
-export function getSpiders(spiders){
+export function getSpiders(props){
   return(
     <div className = "index" />
-    {spiders.render.map(images =>{
+    {props.render.map(images =>{
       const path = images.thumbnail.path;
       const ext = images.thumbnail.extension;
-      const main = [ ,1009157, 100969];
+      const main = [1009157, 100969];
       for (let i = 0; i < images.length; i++){
         if (images[i].id === main){
           return (

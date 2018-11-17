@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import TestList from './Drake';
+import TestList from './Drake';
 
 const KEY = process.env.REACT_APP_API_KEY;
 const URL = 'http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=spider';
@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
 //the main state
     this.state = {
-      data: []
+      data: [],
+      selectData: []
     };
   }
 //function that fetches
@@ -26,7 +27,20 @@ class App extends Component {
       const resp = await axios(URL, opts);
       const data = resp.data.data.results;
       console.log('this is data', data)
-      this.setState({data: data})
+
+      this.setState({
+        data: data
+      })
+      const newArray = [
+          data[4],
+          data[15],
+          data[3],
+          data[2]
+      ]
+      this.setState({
+        selectData: newArray
+      })
+      console.log(this.state.selectData)
 
     } catch(e) {
       console.log(e);
@@ -36,11 +50,13 @@ class App extends Component {
      this.fetchData();
   }
 
+
+
   render() {
     return (
       <div className="App">
-        {/* <TestList render={this.state.data} /> */}
-          <code>{JSON.stringify(this.state.data)}</code>
+        <TestList render={this.state.selectData} />
+          {/* <code>{JSON.stringify(this.state.data)}</code> */}
       </div>
     );
   }
