@@ -4,7 +4,7 @@ import MrLee from './stanlee.jpeg'
 export default function Excelsior(){
   return(
     <div className = "stanBio">
-    <img src={MrLee}/>
+    <img id="Stanley" src={MrLee}/>
       <h2><span>Stan "The Man" Lee (born Stanley Martin Lieber, December 28, 1922 – November 12, 2018)</span>
        was a Comic Book creator, writer, editor, "Chairman Emeritus" of Marvel Comics and creator or co-creator of just about every significant Marvel character,
        <sub>with the exception of those who carry a shield,
