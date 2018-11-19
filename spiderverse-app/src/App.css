@@ -115,6 +115,11 @@ nav > .navBar{
   font-weight: bold;
 }
 
+.intro #morlun {
+  height: 25%;
+  width: 25%;
+}
+
 .captions{
   background-color:red;
   color:black;

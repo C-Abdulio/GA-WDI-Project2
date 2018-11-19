@@ -7,6 +7,7 @@ import Welcome from './components/Welcome';
 import BigList from './components/BigList';
 import Intro from './components/Intro';
 import HeroList from './components/HeroList';
+import Excelsior from './components/Stan';
 // import CreateASpider from './components/Create';
 
 
@@ -70,9 +71,8 @@ class App extends Component {
         return <Intro />
       case 'Heroes':
         return <HeroList heroData = {this.state.selectData} />
-      // case 'Create':
-      //   return <CreateASpider userData = {}/>
-      // case 'Peter': (this.handleObj)
+      case 'TheMan':
+      return <Excelsior />
       default:
         return <Welcome />
     }

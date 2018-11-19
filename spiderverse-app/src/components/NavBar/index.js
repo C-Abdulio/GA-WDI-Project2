@@ -17,8 +17,8 @@ export default function NavBar(props){
       <button className = "button" onClick= {() => props.handleChangeView('Index')}>
         VAULT OF SPIDERS
       </button>
-      <button className = "button" onClick= {() => props.handleChangeView('Create')}>
-        CREATE-A-SPIDER
+      <button className = "button" onClick= {() => props.handleChangeView('TheMan')}>
+        THE LEGEND
       </button>
 
       <div className = "navBar">
