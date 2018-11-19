@@ -12,19 +12,21 @@ EDIT: In leau of any possible contention against sending data to a foreign API, 
 ##~~This API was chosen for their robust list of various super hero characters, location and concepts from across all publishing houses. Need to sign in to an account to use. Currently in discussions with team to gain permissions.~~
 EDIT: This organization behind this API has yet to come back with an answer in regards to signing up to use their API. So for the sake of time, this API is trashed.
 
-## second API ~~*Attempting*~~ to use: http://spiderman.wikia.com/api.php?
-## currently learning about how to parse this data into JSON in order to cull specific points. Wiki is not particular consistent but more dependable
+## second API ~~*Attempting*~~ FAILED to use: http://spiderman.wikia.com/api.php?
+##~~currently learning about how to parse this data into JSON in order to cull specific points. Wiki is not particular consistent but more dependable.~~
+EDIT: Couldn't make this work
 
-##(Alternative: http://gateway.marvel.com/v1/)
+##CURRENT API: http://gateway.marvel.com:80/v1/public/characters?
+EDIT: Not consistent, very cumbersome and did not compile all the necessary data. But it was the only one that worked.
 
 # Minimum Viable Project:
 
-- API NEEDS TO WORK, MAKE CALLS AND SEND DATA
-- NAV BAR CAN CHANGE VIEWS TO DIFFERENT COMPONENTS ON CLICK
-- LIST NEEDS TO RENDER
-- MAIN LIST NEEDS TO RENDER IN SPECIFIC ORDER
-- COMPONENTS CAN SCROLL DOWNWARD
-- CSS WORKS
+- API NEEDS TO WORK, MAKE CALLS AND SEND DATA **check**
+- NAV BAR CAN CHANGE VIEWS TO DIFFERENT COMPONENTS ON CLICK **check**
+- LIST NEEDS TO RENDER **check**
+- MAIN LIST NEEDS TO RENDER IN SPECIFIC ORDER **check**
+- COMPONENTS CAN SCROLL DOWNWARD **check**
+- CSS WORKS **check**
 
 ### Extra Goodies:
 - Able to post data to the API (if permitted)
@@ -60,12 +62,14 @@ EDIT: This organization behind this API has yet to come back with an answer in r
   - Gwen Stacy/Spider-Gwen
   - Kaine Parker/Scarlet Spider(II)
   - Otto Octavius/Superior Spider-Man/Octopus
-  - Cindy Moon/Silk
+  ~~*- Cindy Moon/Silk*~~
   - Aña Corazon/Araña
-  - Spider-Uk
+  ~~*- Spider-Uk*~~
   - Peter Porker/Spider-Ham
-  - Morlun
-  - The Inheritors
+  ~~*- Morlun
+  - The Inheritors*~~
+
+  EDIT: Not all characters where available from the API listing. Description and Appearance data was cut off from use during construction.
 
   ![Component5](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide4.png)
 
@@ -78,7 +82,7 @@ EDIT: This organization behind this API has yet to come back with an answer in r
   Can and WILL be scaled down if necessary.
 
 ![Component6](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide5.png)
-  **Component 6 - Post Screen**
+  ~~* **Component 6 - Post Screen**
   - 2 input fields and One Select Field that the user can interact with by inputting text.
   - Each input field corresponds to the following paramters:
    - Name of user
@@ -88,11 +92,13 @@ EDIT: This organization behind this API has yet to come back with an answer in r
     - The Div will be rendered according to following parameters:
      - If Gender === "Boy", it will render a div featuring their name, the number of their Earth (e.g Earth - 1234) and a blue/red colored div featuring a shadowy Spider-Man figure.
      - If Gender === "Girl", it will render a div featuring their name, the number of their Earth (e.g Earth - 1234) and a teal/pink colored div featuring a shadowy Spider-Woman figure.
-     - If Gender === "Alternative", the same will happen as the other two, but rendered with a black or white color and have a more gender neutral Spider-Avatar.
+     - If Gender === "Alternative", the same will happen as the other two, but rendered with a black or white color and have a more gender neutral Spider-Avatar.*~~
 
  ![Component5](https://github.com/C-Abdulio/GA-WDI-Project2/blob/master/Wireframes/SpiderVerseAPI_ComponenGuide5After.png)
 
-## This Will and MAY get cut if the API does not permit to insert user elements on to the list or if the feature cannot be properly implemented
+## ~~*This Will and MAY get cut if the API does not permit to insert user elements on to the list or if the feature cannot be properly implemented*~~
+
+#EDIT: Could not fully comprehend inner working in time to to meet MVP. Had to be scrapped. Nobody gets to be a Spider-Man/Woman/Person. :(
 
 **Component 6 Alt - A Tribute to Stan Lee**
 - For another idea for a 6th component, and perhaps a far more reasonable *and appropriate* feature, is to create a component that renders API data to create a bio page about the late great legendary Marvel co-creator, Stan Lee. It will include a full bio, quotes, pictures and some video of interviews. Plus a heartfelt ode to the man from myself.
@@ -106,3 +112,26 @@ EDIT: This organization behind this API has yet to come back with an answer in r
 - COMPONENT STRUCTURE IS NOT RENDERED CORRECTLY! EVERYTHING IS ALL WONKY!!
 - **PROPS AND STATE REFUSES TO PASS!! REEEEEEEEEEE!!!!**
 - **NOT BEING ABLE TO REACH MVP BY FRIDAY....AGAIN!**
+
+# FINAL REVIEW:
+This was more of a struggle than it should have been...but then again, the app was a last minute passion project  that had no real purpose but to exists at my whimsy. I learned a lot about how other features and media interact with the various components. I learned that you need to think about the user when you are planning your components and figure out quickly how they can interact with your app in a productive way. A lot of time was unfortunately spent on trying to access the API and seeking to understand how to properly use the information given to me. In the end, I don't even think that I managed to get this  to work properly.
+
+I heavily regret that I couldn't make the items more user-interactive, nor that I could implement the create-a-Spider feature. That would have added a lot more user replayability and would make the app a bit more than just an overrated list app.
+
+But on the bright side, I managed to make it to MVP this time (if you can call it that) and all stylization more or less works. I was actually very happy that i learned how to reformat the list to call in a specific order. I hope post MVP, I can add the missing features
+
+I would like to thank the following people who helped me with this project:
+- Drake Talley
+- Jason Karlin
+- Tara Fenton
+- John Masters
+- Leo
+- Seth
+- Gabriel
+- Anna
+- Yang
+- Marvel Comics and their busted and dated API
+- Stan Lee. Excelsior!!!
+- And my family, who's love, and infinite patience carried me forward when I kept stumbling in the dark.
+
+Now with Youtube Link : https://youtu.be/PojVNDiNx-E
