@@ -7,7 +7,8 @@ import Welcome from './components/Welcome';
 import BigList from './components/BigList';
 import Intro from './components/Intro';
 import HeroList from './components/HeroList';
-import webBG from './webpattern.jpeg';
+// import CreateASpider from './components/Create';
+
 
 /* The URL that you will be calling from...until you get a better API*/
 const KEY = process.env.REACT_APP_API_KEY;
@@ -20,11 +21,6 @@ class App extends Component {
     this.state = {
       listData: [],
       newData: [],
-      name: '',
-      fullName:'',
-      universe: '',
-      bio: '' ,
-      firstAppear: '',
       currentView: ''
     }
     /* Binding the functions to a prop - this - whatever */
@@ -42,17 +38,15 @@ class App extends Component {
 
       const resp = await axios(URL, opts);
       const list = resp.data.data.results;
-      console.log(`this ${list} is a componentDidMount`);
       this.setState({
         listData:list
       })
       const listData = this.state.listData;
-      console.log(listData);
       const newArray = [
         listData[4],
         listData[13],
         listData[6],
-        listData[8]
+        listData[1]
       ]
       this.setState({
         selectData: newArray
@@ -76,6 +70,9 @@ class App extends Component {
         return <Intro />
       case 'Heroes':
         return <HeroList heroData = {this.state.selectData} />
+      // case 'Create':
+      //   return <CreateASpider userData = {}/>
+      // case 'Peter': (this.handleObj)
       default:
         return <Welcome />
     }
@@ -87,12 +84,17 @@ class App extends Component {
     });
   }
 
+  handleObj(){
+
+  }
+
   render() {
     return (
       <div className="App">
         <NavBar handleChangeView= {this.setView} />
-        {this.changeView()}
-        <img className = "bg" src = {webBG} />
+        <div className = "view">
+          {this.changeView()}
+        </div>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import NavImage from './Shape1.png';
 
 export default function NavBar(props){
   return(
-    <nav className = "navBar">
+    <nav>
       <button className = "button" onClick= {() => props.handleChangeView('Intro')}>
         INTRO
       </button>
@@ -12,7 +12,6 @@ export default function NavBar(props){
       </button>
 
       <div className = "imgBtn" onClick ={() => props.handleChangeView('Welcome')}>
-      <img alt= "homeButton" src= {NavImage} />
       </div>
 
       <button className = "button" onClick= {() => props.handleChangeView('Index')}>
@@ -21,6 +20,14 @@ export default function NavBar(props){
       <button className = "button" onClick= {() => props.handleChangeView('Create')}>
         CREATE-A-SPIDER
       </button>
+
+      <div className = "navBar">
+       <img
+       className = "spiderBtn"
+       alt= "homeButton"
+       src= {NavImage}
+       onClick ={() => props.handleChangeView('Welcome')} />
+       </div>
     </nav>
   )
 }

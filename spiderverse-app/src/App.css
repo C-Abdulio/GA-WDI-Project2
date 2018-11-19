@@ -1,18 +1,18 @@
 body{
-  background:url("../src/webpattern.jpeg") 100%;
+  background:url("./webpattern.jpeg");
+  background-color: darkblue;
+  background-blend-mode: multiply;
   background-size: cover;
-  /* background:() */
 }
 
 
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  background-image:url("/webpattern.jpeg") 100%;
-  background-size: cover;
-  background-color: darkblue;
   color: red;
-  height: 100rem;
-  width: 100rem;
+  height: 100vh;
+  width: 100vw;
 }
 
 
@@ -22,41 +22,64 @@ body{
 } */
 
 
-
-.navBar {
+nav {
   width: 50%;
   height:5rem;
-  margin: 0 auto;
-  background-color: rgba(65, 96, 150, 1);
-  position:sticky;
+  margin: 10px auto;
+  position:fixed;
   display:flex;
   flex-flow: row;
   justify-content: space-around;
+
 }
 
-.navBar button{
-  margin-top: 2rem;
+nav button{
+  margin:1.5rem 10px;
   /* justify-content: space-around; */
   width:100%;
-  height:20%;
+  height:40%;
+  padding:10px;
+  border-radius: 5px;
+  background-color:red;
   position: relative;
+  cursor: alias;
+  z-index:1;
+  text-indent: inherit;
+}
+
+nav > .navBar{
+  background-color: rgba(65, 96, 150, 1);
+  border-radius: 10px;
+  width: inherit;
+  height:inherit;
+  position:inherit;
+  z-index:0
 }
 
 .logo{
   width:50%;
   height: 50%;
 }
+.spiderBtn{
+  width:100%;
+  height: 190%;
+  margin-top: -2.7em;
 
+}
 .imgBtn{
-  width:50%;
-  height:500px;
+  margin: 2rem 10px;
+  width:50em;
+  height:40%;
   position:relative;
 }
 
+
 .listImg{
-  width:10%;
-  height:10%;
+  width:100px;
+  height:100px;
 }
+
+
 
 .hero{
   margin:10px;
@@ -69,10 +92,27 @@ body{
   border:solid black 4px;
 }
 
+.view{
+  height:10rem;
+  margin: 10rem auto;
+  position:inherit;
+  overflow: inherit;
+}
 .intro{
   height: auto;
-  width: 500px;
-  top:100px;
+  width: 100%;
+  margin: auto;
+}
+
+.intro img {
+  height: 50%;
+  width: 100%;
+}
+
+.intro article{
+  margin: 10px;
+  padding:5px;
+  font-weight: bold;
 }
 
 .captions{
